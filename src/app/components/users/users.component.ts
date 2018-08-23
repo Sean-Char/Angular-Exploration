@@ -28,7 +28,9 @@ export class UsersComponent implements OnInit {
           state: 'TX'
         },
         image: 'https://placeimg.com/600/600/people/5',
-        isActive: true
+        isActive: true,
+        balance: 100,
+        registered: new Date('01/02/2018 08:30:00')
       },
       {
         firstName: 'Dak',
@@ -40,7 +42,9 @@ export class UsersComponent implements OnInit {
           state: 'TX'
         },
         image: 'https://placeimg.com/600/600/people/2',
-        isActive: false
+        isActive: false,
+        balance: 200,
+        registered: new Date('01/11/2017 06:20:00')
       },
       {
         firstName: 'Zeke',
@@ -52,7 +56,9 @@ export class UsersComponent implements OnInit {
           state: 'TX'
         },
         image: 'https://placeimg.com/600/600/people/1',
-        isActive: true
+        isActive: true,
+        balance: 50,
+        registered: new Date('05/015/2016 03:40:00')
       }
     ];
 
