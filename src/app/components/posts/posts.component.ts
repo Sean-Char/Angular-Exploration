@@ -16,7 +16,7 @@ export class PostsComponent implements OnInit {
   };
   isEdit: boolean = false;
 
-  constructor(private postService: PostService) {}
+  constructor(private postService: PostService) { }
 
   ngOnInit() {
     this.postService.getPosts().subscribe(posts => {
@@ -47,4 +47,17 @@ export class PostsComponent implements OnInit {
       }
     });
   }
+
+  removePost(post: Post) {
+    if (confirm('Are You Sure?')) {
+      this.postService.removePost(post.id).subscribe(() => {
+        this.posts.forEach((cur, index) => {
+          if (post.id === cur.id) {
+            this.posts.splice(index, 1);
+          }
+        });
+      })
+    }
+  }
+
 }
